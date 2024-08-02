@@ -8,9 +8,9 @@ import org.jfree.data.general.DefaultPieDataset;
 
 import javafx.scene.paint.Color;
 
-public class Chart extends JFrame{
+public class PieChart extends JFrame{
 
-    public Chart(){
+    public PieChart(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Chart");
         setSize(950, 700);
@@ -23,8 +23,8 @@ public class Chart extends JFrame{
 
     public void createChart(){
         DefaultPieDataset grafico = new DefaultPieDataset();
-        grafico.setValue("Boys", 127);
-        grafico.setValue("Girls", 209);
+        grafico.setValue("Boys", 12);
+        grafico.setValue("Girls", 92);
 
         JFreeChart create = ChartFactory.createPieChart("Students", grafico, false, false, true);
         ChartPanel painel = new ChartPanel(create);
@@ -35,6 +35,6 @@ public class Chart extends JFrame{
 
     public static void main(String[] args) {
         
-        new Chart();
+        new PieChart();
     }
 }
