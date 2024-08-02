@@ -23,10 +23,10 @@ public class PieChart extends JFrame{
 
     public void createChart(){
         DefaultPieDataset grafico = new DefaultPieDataset();
-        grafico.setValue("Boys", 12);
+        grafico.setValue("Boys", 42);
         grafico.setValue("Girls", 92);
 
-        JFreeChart create = ChartFactory.createPieChart("Students", grafico, false, false, true);
+        JFreeChart create = ChartFactory.createPieChart3D("Students", grafico, true, true, false);
         ChartPanel painel = new ChartPanel(create);
         add(painel);
 
